@@ -1,0 +1,9 @@
+language: python
+python:
+  - "3.4"
+# command to install dependencies
+install: 
+- "pip install -U pip"
+- "pip install -U pandas scikit-learn numpy matplotlib gensim smart_open re spacy nltk mglearn nbconvert jupyter_client ipykernel"
+# command to run tests
+script: travis_wait jupyter-nbconvert --execute hw3_starter_notebook.ipynb --ExecutePreprocessor.timeout=None
